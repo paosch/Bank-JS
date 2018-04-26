@@ -8,4 +8,8 @@ Account.prototype.displayBalance = function(){
 
 Account.prototype.deposit = function(amount){
   this.balance += amount;
-}
+};
+
+Account.prototype.withdraw = function(amount){
+  this.balance -= amount;
+};
