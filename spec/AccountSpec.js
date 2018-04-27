@@ -19,4 +19,9 @@ it('customer can withdraw money', function(){
   account.withdraw(15);
   expect(account.balance).toEqual(85)
 })
+
+it('customer cannot withdraw money if insufficient funds', function(){
+  account.balance = 10;
+  expect(function(){account.withdraw(20)}).toThrowError('There are insufficient funds in your account')
+})
 });
